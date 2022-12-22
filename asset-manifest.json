@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/movie_discovery_app/static/css/main.f84576df.css",
+    "main.js": "/movie_discovery_app/static/js/main.9516e244.js",
+    "index.html": "/movie_discovery_app/index.html",
+    "main.f84576df.css.map": "/movie_discovery_app/static/css/main.f84576df.css.map",
+    "main.9516e244.js.map": "/movie_discovery_app/static/js/main.9516e244.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f84576df.css",
+    "static/js/main.9516e244.js"
+  ]
+}
