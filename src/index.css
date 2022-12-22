@@ -1,13 +1,126 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  margin:0;
+  padding:0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+    height:100vh;
+    
+    margin: 10px 121px 0 121px;
+}
+
+.upperFlex{
+  display: flex;
+  justify-content: space-between;
+}
+
+form.nosubmit {
+  border: none;
+  padding: 0;
+}
+h1{
+  font-size: medium;
+}
+
+input.nosubmit {
+  width: 180px;
+  border: 1px solid #C0C4CC;
+  display: block;
+  padding: 9px 15px 9px 40px;
+  margin-top: 5px;
+  background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center;
+}
+
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+
+.card{
+  margin:5px;
+  height:348px;
+  width:230px;
+  border:1px solid #E1E3E6;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.card > img{
+  height:302px;
+  width:230px;
+  border-radius: 7px 7px 0px 0px;
+}
+
+.Center{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Center > h1{
+  width:109;
+  font-size:10px;
+}
+
+.modal{
+  position:fixed;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(0,0,0,0.5);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid1{
+  display:grid;
+  width:500px;
+  height:400px;
+  background-color: white;
+}
+
+.flexbox{
+  display:flex;
+  justify-content: space-between;
+}
+
+.flexbox > img{
+  height:302px;
+}
+
+.overview{
+  height:100px;
+}
+
+.margin1{
+  margin:0 27px 27px 27px;
+}
+
+.margin2{
+  margin:20px 27px 0 27px;
+}
+
+.margin3{
+  margin-left:22px;
+}
+
+.dot {
+  background: white;
+  width: 34px; 
+  height: 34px;
+  border-radius: 50%;
+  display: flex; /* or inline-flex */
+  align-items: center; 
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  left:5px;
+
+}
+
+button{
+  padding: 0 0 0 0;
+  margin:0;
 }

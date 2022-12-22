@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import UpperComponent from "./Components/UpperComponent.jsx";
+import MovieGrid from "./Components/MovieGrid.jsx";
+import { useEffect, useState } from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const URI = `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=2`
+
+function App(){
+    const [Value,setValue] = useState([]);
+    console.log("Value is",Value);
+    async function searchMovies(){
+        const response = await fetch(URI);
+        console.log("response is",response);
+        const data =await response.json();
+        setValue(data.results);
+        console.log("data is",data);
+    }
+    useEffect(()=>{
+        searchMovies();
+    },[])
+
+    return(
+        <>
+        <UpperComponent />
+        <hr></hr>
+        <h1>Most Recent Movies</h1>
+        <MovieGrid result ={Value}  />
+        </>
+    )
 }
 
 export default App;
