@@ -8,7 +8,8 @@ function SearchBox(){
             
             if(e.key === 'Enter'){
               // alert('Input value is',e.target.value);
-              console.log("e is",e.target.value);
+              
+              
             }
           }}
           
