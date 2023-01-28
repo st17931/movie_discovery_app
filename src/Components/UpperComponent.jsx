@@ -3,11 +3,11 @@ import SearchBox from "./SearchBox";
 import image from "../logo.jpeg";
 
 
-function UpperComponent(){
+function UpperComponent({result, setFunction}){
     return(
         <div className="upperFlex">
             <img src={image} alt="Logo" />
-            <SearchBox />
+            <SearchBox value = {result} setFunction = {setFunction}/>
         </div>
     )
 }

@@ -4,6 +4,10 @@ import AboutMovie from "./AboutMovie";
 
 function MovieCard({result}){
     const [show,setshow] = useState(false);
+
+    function settingUseState (a){
+        setshow(a);
+    }
     return(
         <>
         <div className="card">
@@ -19,7 +23,7 @@ function MovieCard({result}){
             </div>
             {/* <div class="dot">{result.vote_average}</div> */}
         </div>
-        <AboutMovie onClose={()=>{setshow(false)}} obj={result} is={show} />
+        <AboutMovie onClose={settingUseState} obj={result} is={show} />
         </>
     )
 }

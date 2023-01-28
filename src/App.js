@@ -17,11 +17,15 @@ function App(){
     }
     useEffect(()=>{
         searchMovies();
-    },[])
+    },[]);
+
+    function setToSearched(movie){
+        setValue(movie);
+    }
 
     return(
         <>
-        <UpperComponent />
+        <UpperComponent result={Value} setFunction={setToSearched}/>
         <hr></hr>
         <h1>Most Recent Movies</h1>
         <MovieGrid result ={Value}  />

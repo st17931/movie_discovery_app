@@ -5,12 +5,17 @@ if(!is){
     return null;
 }
 
+let s = false;
+const handleClick = () =>{
+  onClose(s)
+}
+
 return(
- <div className="modal" onClick={onClose}>
+ <div className="modal" onClick={handleClick}>
     <div className="grid1" onClick={e=>e.stopPropagation()}>
         <div className="flexbox margin2">
           <h2>{obj.original_title}</h2>
-          <button onClick={onClose}>X</button>
+          <button onClick={handleClick}>X</button>
         </div>
         <div className="flexbox margin1">
           <img src={`http://image.tmdb.org/t/p/w185/${obj.poster_path}`} alt="Avatar"  />

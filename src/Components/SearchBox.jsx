@@ -1,19 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 
-function SearchBox(){
+
+function SearchBox({value, setFunction}){
+    const [message, setmessage]  = useState('');
+    console.log("values in searchBox component",value,setFunction);
+
+    function handleKeyDown(e){
+      if(e.key === 'Enter'){
+        const newMainState = value.filter((ob)=> ob.original_title ===  message)
+        setFunction(newMainState);
+        e.preventDefault()
+      }
+    }
     return(
         <form className="nosubmit">
           <input className="nosubmit" type="search" placeholder="Search the movies" 
-          onKeyDown={(e)=>{
-            
-            if(e.key === 'Enter'){
-              // alert('Input value is',e.target.value);
-              
-              
-            }
-          }}
+          onKeyDown={handleKeyDown}
           
-          // onChange={event => console.log("event value is",event.target.value)}
+          onChange={event => setmessage(event.target.value)}
           />
         </form>
     )
