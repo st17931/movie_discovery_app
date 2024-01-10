@@ -28,7 +28,10 @@ function App(){
         <UpperComponent result={Value} setFunction={setToSearched}/>
         <hr></hr>
         <h1>Most Recent Movies</h1>
-        <MovieGrid result ={Value}  />
+        
+            <MovieGrid result ={Value}  />
+        
+        
         </>
     )
 }
